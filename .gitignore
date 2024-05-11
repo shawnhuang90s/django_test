@@ -1,6 +1,7 @@
 *.pyc
 *.log
-.vscode
+
+*.log_rotating_lock
 
 **/.idea/
 **/migrations/

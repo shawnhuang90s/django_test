@@ -1,5 +1,0 @@
-2024-05-07 11:12:43 | DEBUG    | main | This is a debug log message.
-2024-05-07 11:12:43 | INFO     | main | This is an info log message.
-2024-05-07 11:12:43 | WARNING  | main | This is a warning log message.
-2024-05-07 11:12:43 | ERROR    | main | This is an error log message.
-2024-05-07 11:12:43 | CRITICAL | main | This is a critical log message.
