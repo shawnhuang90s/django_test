@@ -1,46 +1,35 @@
-# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
 *.so
 
-# Distribution / packaging
 build/
 dist/
 *.egg-info/
 *.egg
 
-# Python environments
 env/
 venv/
 .venv/
 ENV/
 
-# Django specific
 db.sqlite3
 *.log
 media/
 static/
 
-# IDE specific
 .idea/
 .vscode/
 
-# Logs and databases
 logs/
 
-# Unit test / coverage reports
 .coverage
 htmlcov/
 
-# Ignore all .pyc files in migrations directories
 **/migrations/*.py[cod]
 
-# Ignore all .py files in migrations directories, except init.py
 **/migrations/*.py
 !**/migrations/__init__.py
 
-# Local settings
 local_settings.py
