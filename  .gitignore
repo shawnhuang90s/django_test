@@ -10,6 +10,7 @@ __pycache__/
 build/
 dist/
 *.egg-info/
+*.egg
 
 # Python environments
 env/
@@ -34,8 +35,12 @@ logs/
 .coverage
 htmlcov/
 
-# Ignore all .py files in migrations directories
+# Ignore all .pyc files in migrations directories
+**/migrations/*.py[cod]
+
+# Ignore all .py files in migrations directories, except init.py
 **/migrations/*.py
+!**/migrations/__init__.py
 
 # Local settings
 local_settings.py
