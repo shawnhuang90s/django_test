@@ -5,7 +5,7 @@
 # Description:
 from django.urls import path
 
-from .views import test_global_request, test_multiple_language
+from .views import test_global_request, test_multiple_language, test_api_performance
 
 
 urlpatterns = [
@@ -13,4 +13,6 @@ urlpatterns = [
     path('/test_global_request', test_global_request),
     # 测试多语言
     path('/test_multiple_language', test_multiple_language),
+    # 测试接口耗时
+    path('/test_api_performance', test_api_performance),
 ]
