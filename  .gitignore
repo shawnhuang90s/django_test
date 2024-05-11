@@ -1,52 +1,41 @@
-# 环境变量文件
-.env
-# 包含敏感信息的本地设置文件
-settings_local.py
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-# 忽略数据库迁移文件，这里以 Django 默认的 SQLite 数据库文件为例
-db.sqlite3
+# C extensions
+*.so
 
-# 所有日志文件
-*.log
-# 日志目录
-logs/
-
-# 静态文件目录
-static/
-# 用户上传的媒体文件目录
-media/
-
-# 健康检查
-heelth_check_storage_test/
-
-# Python 编译缓存目录
-**/__pycache__/
-# 编译后的 Python 文件
-*.pyc
-
-# Visual Studio Code 配置
-.vscode/
-# JetBrains IDEs 配置，例如 PyCharm
-.idea/
-# Sublime Text 配置文件
-*.sublime-*
-
-# 构建目录
+# Distribution / packaging
 build/
-# 分发目录
 dist/
-# Egg 信息目录
 *.egg-info/
 
-# 一般缓存目录
-.cache/
-# 编译后的文件（更全面的排除）
-*.py[cod]
+# Python environments
+env/
+venv/
+.venv/
+ENV/
 
-# macOS 系统文件
-.DS_Store
-# Windows 系统文件
-Thumbs.db
+# Django specific
+db.sqlite3
+*.log
+media/
+static/
 
-# 忽略所有名为migrations的目录
-**/migrations/
+# IDE specific
+.idea/
+.vscode/
+
+# Logs and databases
+logs/
+
+# Unit test / coverage reports
+.coverage
+htmlcov/
+
+# Ignore all .py files in migrations directories
+**/migrations/*.py
+
+# Local settings
+local_settings.py
