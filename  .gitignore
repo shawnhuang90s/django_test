@@ -49,4 +49,4 @@ dist/
 Thumbs.db
 
 # 忽略所有名为migrations的目录
-migrations/
+**/migrations/
