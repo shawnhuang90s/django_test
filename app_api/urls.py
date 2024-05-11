@@ -5,10 +5,12 @@
 # Description:
 from django.urls import path
 
-from .views import test_global_request
+from .views import test_global_request, test_multiple_language
 
 
 urlpatterns = [
     # 测试全局访问请求对象
-    path('/test_global_request', test_global_request)
+    path('/test_global_request', test_global_request),
+    # 测试多语言
+    path('/test_multiple_language', test_multiple_language),
 ]
