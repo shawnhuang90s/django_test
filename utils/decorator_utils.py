@@ -6,6 +6,7 @@
 import time
 from functools import wraps
 from config.loguru_config import api_logger
+from django.db import connections
 
 
 def track_performance(threshold=0):
@@ -24,8 +25,21 @@ def track_performance(threshold=0):
             # 如果执行时间超过阈值，则记录或报告
             if elapsed_time > threshold:
                 api_logger.error(
-                    f"Function '{func.__name__}' took {elapsed_time:.2f} ms to complete, "
+                    f"track_performance function '{func.__name__}' took {elapsed_time:.2f} ms to complete, "
                     f"which exceeds the threshold of {threshold} ms.")
             return result
         return wrapper
     return decorator
+
+
+def recycle_db_conns(func):
+    """回收断掉的数据库链接"""
+    @wraps(func)
+    def func_wrapper(*args, **kwargs):
+        for conn in connections.all():
+            conn.close_if_unusable_or_obsolete()
+            # 真实检查一下连接是否可用，不可用就关闭，下次使用的时候自动创建
+            if conn.connection and not conn.is_usable():
+                conn.close()
+        return func(*args, **kwargs)
+    return func_wrapper
