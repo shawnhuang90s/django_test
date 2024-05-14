@@ -1,8 +1,8 @@
 from django.utils.translation import gettext as _
 
-from utils.response import APPResponse
+from utils.response_utils import APPResponse
 from test.global_request_test import global_request_test
-from utils.decorator import track_performance
+from utils.decorator_utils import track_performance
 
 
 def test_global_request(request):
